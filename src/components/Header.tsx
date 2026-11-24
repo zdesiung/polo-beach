@@ -5,6 +5,7 @@ import { BrandLogo } from './BrandLogo';
 import { useStore } from '../context/StoreContext';
 import { formatPEN, trackEcommerceEvent } from '../utils/analytics';
 import { ResilientImage } from './ResilientImage';
+import { HeaderVisualSlider } from './HeaderVisualSlider';
 
 const NAV_LINKS = [
   { label: 'Hombre', to: '/shop/hombre' },
@@ -193,6 +194,8 @@ export function Header() {
           </div>
         </header>
       </div>
+
+      {isHome && <HeaderVisualSlider />}
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
